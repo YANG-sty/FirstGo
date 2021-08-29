@@ -11,4 +11,6 @@ func main() {
 	flag = false
 	fmt.Println(flag)
 
+	fmt.Printf("%t, %v\n", flag, flag)
+
 }

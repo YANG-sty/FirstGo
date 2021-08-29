@@ -3,6 +3,17 @@ package main
 import "fmt"
 
 func main() {
+
+	//有符号整型
+	var ii = 1
+	var iu = -100
+	fmt.Printf("%T, %v\n", ii, ii)
+	fmt.Printf("%T, %v\n", iu, iu)
+
+	//无符号整型
+	var ui uint = 123
+	fmt.Printf("%T, %v\n", ui, ui)
+
 	// 不同的数据类型是不能进行运算的
 	var age int = 18 // 默认是64位
 	var age8 int8 = 18
@@ -15,7 +26,7 @@ func main() {
 	fmt.Printf("%T, %#v, %d\n", age32, age32, age32)
 
 	fmt.Println(077)   // 8进制
-	fmt.Println(0X123) // 16进制
+	fmt.Println(0x123) // 16进制
 	fmt.Println(78)    // 10进制
 	fmt.Println(111)   // 默认是10进制
 

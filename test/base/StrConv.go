@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	var(
-		intValue = 18
+	var (
+		intValue     = 18
 		float64Value = 18.00
-		stringValue = "18"
+		stringValue  = "18"
 	)
 	fmt.Printf("%T, %#v\n", string(intValue), string(intValue))
 	fmt.Printf("%T, %#v\n", int(float64Value), int(float64Value))
@@ -19,10 +19,14 @@ func main() {
 	v, err := strconv.Atoi(stringValue)
 	fmt.Println(v, err)
 	fmt.Printf("%T, %#v\n", v, v)
+	fmt.Println("-------------------------")
+	// int 转换为 字符串
+	stringValue = strconv.Itoa(intValue)
+	fmt.Printf("%T, %#v\n", stringValue, stringValue) //string, "18"
 
 	//字符串转float
 	f, err := strconv.ParseFloat(stringValue, 64)
-	fmt.Println(f, err)
+	fmt.Println(f, err) //18 <nil>
 	fmt.Printf("%T, %#v\n", f, f)
 
 	//int转字符串
