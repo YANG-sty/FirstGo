@@ -14,6 +14,7 @@ func main() {
 		fmt.Println("NO")
 	}
 
+	// switch 的方式，每个 case 在匹配到后，不用使用break ，后面的内容默认不再进行匹配操作
 	switch flag {
 	case "y":
 		fmt.Println("2 YES")
